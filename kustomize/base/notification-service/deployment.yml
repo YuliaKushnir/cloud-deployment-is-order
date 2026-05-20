@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service
+  namespace: cloud-demo
+  labels:
+    app: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+    spec:
+      containers:
+        - name: notification-service
+          image: ghcr.io/yuliakushnir/notification-service:latest
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
+
+          env:
+            - name: $RABBITMQ_USER
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: username
+            - name: $RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: password
+
+            - name: $MAIL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: mail-secret
+                  key: host
+            - name: $MAIL_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: mail-secret
+                  key: port
+            - name: $MAIL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mail-secret
+                  key: username
+            - name: $MAIL_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: mail-secret
+                  key: password
+
+            - name: KEYCLOAK_HOST
+              value: "keycloak"
+            - name: KEYCLOAK_PORT
+              value: "8181"
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8085
+            initialDelaySeconds: 20
+            periodSeconds: 10
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8085
+            initialDelaySeconds: 40
+            periodSeconds: 20

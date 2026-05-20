@@ -1,0 +1,5 @@
+CREATE DATABASE is_user;
+CREATE DATABASE is_product;
+CREATE DATABASE is_order;
+CREATE DATABASE is_print;
+CREATE DATABASE keycloak;

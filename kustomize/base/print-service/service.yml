@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: print-service
+spec:
+  selector:
+    app: print-service
+  ports:
+    - port: 8084
+      targetPort: 8080
+  type: ClusterIP

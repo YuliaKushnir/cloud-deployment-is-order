@@ -1,0 +1,81 @@
+{
+  "realm": "cloud-realm",
+  "enabled": true,
+
+  "roles": {
+    "realm": [
+      { "name": "ROLE_CLIENT" },
+      { "name": "ROLE_MANAGER" },
+      { "name": "ROLE_EXECUTOR" },
+      { "name":  "ROLE_ADMIN" }
+    ]
+  },
+
+  "clients": [
+    {
+      "clientId": "frontend-client",
+      "enabled": true,
+      "publicClient": true,
+      "redirectUris": ["*"],
+      "webOrigins": ["*"]
+    },
+    {
+      "clientId": "gateway-client",
+      "enabled": true,
+      "publicClient": false,
+      "secret": "gateway-secret",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": ["*"],
+      "webOrigins": ["*"]
+    }
+  ],
+
+  "users": [
+    {
+      "username": "client",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": ["ROLE_CLIENT"]
+    },
+    {
+      "username": "manager",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": ["ROLE_MANAGER"]
+    },
+    {
+      "username": "executor",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": ["ROLE_EXECUTOR"]
+    },
+    {
+      "username": "admin",
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "password"
+        }
+      ],
+      "realmRoles": ["ROLE_ADMIN"]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-service
+  namespace: cloud-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-service
+  template:
+    metadata:
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - name: gateway-service
+          image: gateway-is-order:latest
+          imagePullPolicy: Always
+
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+
+          ports:
+            - containerPort: 8080
+
+          env:
+            - name: PRODUCT_SERVICE_HOST
+              value: "product-service"
+            - name: PRODUCT_SERVICE_PORT
+              value: "8081"
+            - name: USER_SERVICE_HOST
+              value: "user-service"
+            - name: USER_SERVICE_PORT
+              value: "8082"
+            - name: ORDER_SERVICE_HOST
+              value: "order-service"
+            - name: ORDER_SERVICE_PORT
+              value: "8083"
+            - name: PRINT_SERVICE_HOST
+              value: "print-service"
+            - name: PRINT_SERVICE_PORT
+              value: "8084"
+            - name: NOTIFICATION_SERVICE_HOST
+              value: "notification-service"
+            - name: NOTIFICATION_SERVICE_PORT
+              value: "8085"
+            - name: KEYCLOAK_HOST
+              value: "keycloak"
+            - name: KEYCLOAK_PORT
+              value: "8181"
+#            - name: GOOGLE_CLIENT_ID
+#              valueFrom:
+#                secretKeyRef:
+#                  name: google-oauth-secret
+#                  key: client-id
+#            - name: GOOGLE_CLIENT_SECRET
+#              valueFrom:
+#                secretKeyRef:
+#                  name: google-oauth-secret
+#                  key: client-secret
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 30
