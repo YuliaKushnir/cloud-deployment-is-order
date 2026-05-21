@@ -22,7 +22,7 @@ images:
   newTag: latest
 - name: print-service
   newName: ghcr.io/yuliakushnir/print-service
-  newTag: latest
+  newTag: 490982ef55042c1bb5582a5c923feef6cbed979a
 - name: product-service
   newName: ghcr.io/yuliakushnir/product-service
   newTag: latest
