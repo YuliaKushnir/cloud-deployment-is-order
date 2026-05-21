@@ -7,5 +7,5 @@ spec:
     app: print-service
   ports:
     - port: 8084
-      targetPort: 8080
+      targetPort: 8084
   type: ClusterIP
