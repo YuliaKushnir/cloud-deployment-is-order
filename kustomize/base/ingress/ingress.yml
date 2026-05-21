@@ -7,17 +7,13 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-send-timeout: "120"
     nginx.ingress.kubernetes.io/proxy-body-size: "10m"
 
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/use-forwarded-headers: "false"
-
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
           # Path to auth
-          - path: /auth
+          - path: /realms
             pathType: Prefix
             backend:
               service:
