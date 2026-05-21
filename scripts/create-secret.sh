@@ -19,8 +19,10 @@ echo "=== Creating / Updating Kubernetes Secrets ==="
 required_vars=(
   POSTGRES_USER
   POSTGRES_PASSWORD
+
   RABBITMQ_USER
   RABBITMQ_PASSWORD
+
   MAIL_HOST
   MAIL_PORT
   MAIL_USER
