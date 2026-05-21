@@ -62,16 +62,34 @@ spec:
             - name: KEYCLOAK_PORT
               value: "8181"
 
+#          readinessProbe:
+#            httpGet:
+#              path: /actuator/health
+#              port: 8083
+#            initialDelaySeconds: 40
+#            periodSeconds: 10
+#            timeoutSeconds: 5
+#            failureThreshold: 6
+
+#          livenessProbe:
+#            httpGet:
+#              path: /actuator/health
+#              port: 8083
+#            initialDelaySeconds: 90
+#            periodSeconds: 20
+#            timeoutSeconds: 5
+#            failureThreshold: 6
+
           readinessProbe:
             httpGet:
               path: /health
               port: 8083
-            initialDelaySeconds: 20
+            initialDelaySeconds: 50
             periodSeconds: 10
 
           livenessProbe:
             httpGet:
               path: /health
               port: 8083
-            initialDelaySeconds: 40
+            initialDelaySeconds: 150
             periodSeconds: 20
