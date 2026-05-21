@@ -20,6 +20,22 @@ spec:
                 name: keycloak
                 port:
                   number: 8181
+          - path: /admin
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8181
+
+          - path: /resources
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8181
+
           # API requests go directly to the Gateway
           - path: /api
             pathType: Prefix
