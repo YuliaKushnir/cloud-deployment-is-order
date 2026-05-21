@@ -24,33 +24,33 @@ spec:
             - containerPort: 8080
 
           env:
-            - name: $RABBITMQ_USER
+            - name: RABBITMQ_USER
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
                   key: username
-            - name: $RABBITMQ_PASSWORD
+            - name: RABBITMQ_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
                   key: password
 
-            - name: $MAIL_HOST
+            - name: MAIL_HOST
               valueFrom:
                 secretKeyRef:
                   name: mail-secret
                   key: host
-            - name: $MAIL_PORT
+            - name: MAIL_PORT
               valueFrom:
                 secretKeyRef:
                   name: mail-secret
                   key: port
-            - name: $MAIL_USER
+            - name: MAIL_USER
               valueFrom:
                 secretKeyRef:
                   name: mail-secret
                   key: username
-            - name: $MAIL_PASS
+            - name: MAIL_PASS
               valueFrom:
                 secretKeyRef:
                   name: mail-secret

@@ -50,7 +50,7 @@ spec:
                 secretKeyRef:
                   name: keycloak-secret
                   key: password
-            - name: $KEYCLOAK_TARGET_CLIENT_ID
+            - name: KEYCLOAK_TARGET_CLIENT_ID
               valueFrom:
                 secretKeyRef:
                   name: keycloak-secret

@@ -19,12 +19,12 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            - name: $RABBITMQ_USER
+            - name: RABBITMQ_USER
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
                   key: username
-            - name: $RABBITMQ_PASSWORD
+            - name: RABBITMQ_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: rabbitmq-secret
