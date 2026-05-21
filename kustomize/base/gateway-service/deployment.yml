@@ -51,7 +51,7 @@ spec:
             - name: NOTIFICATION_SERVICE_PORT
               value: "8085"
             - name: KEYCLOAK_HOST
-              value: "keycloak"
+              value: "34.116.235.108"
             - name: KEYCLOAK_PORT
               value: "8181"
 #            - name: GOOGLE_CLIENT_ID
