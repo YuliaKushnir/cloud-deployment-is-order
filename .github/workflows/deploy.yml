@@ -74,7 +74,7 @@ jobs:
           echo "Deploying services: $SERVICES with tag: $TAG"
 
           if [[ "$SERVICES" == "all" || "$SERVICES" == *"gateway-service"* ]]; then
-            kustomize edit set image gateway-service=${{ env.REGISTRY }}/${OWNER}/gateway-is-order:${TAG}
+            kustomize edit set image gateway-is-order=${{ env.REGISTRY }}/${OWNER}/gateway-is-order:${TAG}
           fi
 
           if [[ "$SERVICES" == "all" || "$SERVICES" == *"product-service"* ]]; then
