@@ -8,6 +8,9 @@ images:
 - name: frontend
   newName: ghcr.io/yuliakushnir/frontend-is-order
   newTag: latest
+- name: gateway-is-order
+  newName: ghcr.io/yuliakushnir/gateway-is-order
+  newTag: 833bd42aaaacd5da127be07748eeba7e324c023e
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
@@ -25,4 +28,4 @@ images:
   newTag: latest
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
-  newTag: latest
+  newTag: 92c8de34f02b18c246c242cd33190ee36234aa62
