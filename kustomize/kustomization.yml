@@ -10,7 +10,7 @@ images:
   newTag: latest
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
-  newTag: latest
+  newTag: 2ca7165203f9f694718704c06aded8b4af0b390f
 - name: notification-service
   newName: ghcr.io/yuliakushnir/notification-service
   newTag: latest
