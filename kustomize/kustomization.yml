@@ -11,19 +11,18 @@ images:
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
+- name: notification-service
+  newName: ghcr.io/yuliakushnir/notification-service
+  newTag: latest
+- name: order-service
+  newName: ghcr.io/yuliakushnir/order-service
+  newTag: latest
+- name: print-service
+  newName: ghcr.io/yuliakushnir/print-service
+  newTag: latest
 - name: product-service
   newName: ghcr.io/yuliakushnir/product-service
   newTag: latest
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
   newTag: latest
-- name: print-service
-  newName: ghcr.io/yuliakushnir/print-service
-  newTag: latest
-- name: order-service
-  newName: ghcr.io/yuliakushnir/order-service
-  newTag: latest
-- name: notification-service
-  newName: ghcr.io/yuliakushnir/notification-service
-  newTag: latest
-
