@@ -48,6 +48,18 @@ spec:
                   name: postgresql-secret
                   key: password
 
+            - name: KC_PROXY
+              value: edge
+
+            - name: KC_HOSTNAME
+              value: 34.116.235.108
+
+            - name: KC_HOSTNAME_STRICT
+              value: "false"
+
+            - name: KC_HTTP_ENABLED
+              value: "true"
+
           volumeMounts:
             - name: realm-config
               mountPath: /opt/keycloak/data/import
