@@ -142,8 +142,8 @@ jobs:
           KEYCLOAK_ADMIN_PASSWORD: ${{ secrets.KEYCLOAK_ADMIN_PASSWORD }}
 
         run: |
-          chmod +x ./scripts/create-secret.sh
-          ./scripts/create-secret.sh
+          chmod +x ./scripts/create-secrets.sh
+          ./scripts/create-secrets.sh
 
       - name: Deploy to GKE
         run: |
