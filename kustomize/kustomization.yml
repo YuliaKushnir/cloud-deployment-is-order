@@ -7,10 +7,10 @@ resources:
 images:
 - name: frontend
   newName: ghcr.io/yuliakushnir/frontend-is-order
-  newTag: 0fd9dc06f03a881703eeab4923e66a3dad54f457
+  newTag: ab0c63ef5281005541a1de76e929ec497b169517
 - name: gateway-is-order
   newName: ghcr.io/yuliakushnir/gateway-is-order
-  newTag: latest
+  newTag: 715dcd63a5814effb3d643c72a3f40e36e874502
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
@@ -19,13 +19,13 @@ images:
   newTag: latest
 - name: order-service
   newName: ghcr.io/yuliakushnir/order-service
-  newTag: 12396c01bfb2ddb1c57b6a0a2d51879129061c9e
+  newTag: 777a38ac75c9a8d51cc09164a08a5112a9b306b0
 - name: print-service
   newName: ghcr.io/yuliakushnir/print-service
   newTag: latest
 - name: product-service
   newName: ghcr.io/yuliakushnir/product-service
-  newTag: 98828cd4497c1c2df252c2fbfde160e75d28fcad
+  newTag: latest
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
-  newTag: 268cd60e339a4278b968b255827e2b84adab434a
+  newTag: latest
