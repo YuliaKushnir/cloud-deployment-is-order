@@ -7,7 +7,7 @@ resources:
 images:
 - name: frontend
   newName: ghcr.io/yuliakushnir/frontend-is-order
-  newTag: ee900fcf994001e6a5a74405c76e07c235508f0d
+  newTag: ab0c63ef5281005541a1de76e929ec497b169517
 - name: gateway-is-order
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
