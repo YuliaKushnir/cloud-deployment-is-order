@@ -17,7 +17,7 @@ spec:
         - name: user-service
           image: ghcr.io/yuliakushnir/user-service:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
           env:
             - name: POSTGRES_USER
               valueFrom:

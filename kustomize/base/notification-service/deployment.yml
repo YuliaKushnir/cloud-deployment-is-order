@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: Always
 
           ports:
-            - containerPort: 8080
+            - containerPort: 8085
 
           env:
             - name: RABBITMQ_USER
