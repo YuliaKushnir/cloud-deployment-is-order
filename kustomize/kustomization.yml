@@ -10,7 +10,7 @@ images:
   newTag: latest
 - name: gateway-is-order
   newName: ghcr.io/yuliakushnir/gateway-is-order
-  newTag: 833bd42aaaacd5da127be07748eeba7e324c023e
+  newTag: latest
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
@@ -19,13 +19,13 @@ images:
   newTag: latest
 - name: order-service
   newName: ghcr.io/yuliakushnir/order-service
-  newTag: latest
+  newTag: 5d284b3cfc8f089e0c2ca1efa1f519bb8f2cce74
 - name: print-service
   newName: ghcr.io/yuliakushnir/print-service
-  newTag: latest
+  newTag: 490982ef55042c1bb5582a5c923feef6cbed979a
 - name: product-service
   newName: ghcr.io/yuliakushnir/product-service
   newTag: latest
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
-  newTag: 92c8de34f02b18c246c242cd33190ee36234aa62
+  newTag: latest
