@@ -28,4 +28,4 @@ images:
   newTag: latest
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
-  newTag: latest
+  newTag: 5b00aee5c32995a7e77eadfbe0c74cf0eda1fd2e
