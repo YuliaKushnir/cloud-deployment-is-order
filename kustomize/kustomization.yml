@@ -10,7 +10,7 @@ images:
   newTag: d6b92aeb2ad83b34afed9feb82e223696de672e1
 - name: gateway-is-order
   newName: ghcr.io/yuliakushnir/gateway-is-order
-  newTag: baaef6e16af04328d060684f48f5633fed75ef7d
+  newTag: 8e5f109dd30b9bd77b198051800de0c3642e4db3
 - name: gateway-service
   newName: ghcr.io/yuliakushnir/gateway-is-order
   newTag: latest
