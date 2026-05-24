@@ -25,7 +25,7 @@ images:
   newTag: latest
 - name: product-service
   newName: ghcr.io/yuliakushnir/product-service
-  newTag: 768b9317bf5de24e9e4ae812b6429f7c78896bbd
+  newTag: fc860ef1561b98b1f4772b65a2df1f9a70fc09bd
 - name: user-service
   newName: ghcr.io/yuliakushnir/user-service
   newTag: 42696a59ffeb463c9e3ba85964ca7dd40872f245
