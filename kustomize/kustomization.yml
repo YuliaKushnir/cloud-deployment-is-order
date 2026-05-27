@@ -19,7 +19,7 @@ images:
   newTag: latest
 - name: order-service
   newName: ghcr.io/yuliakushnir/order-service
-  newTag: 462ad517923aee4d4ae92626991d164f160c78fe
+  newTag: 31467040de5bacd068a387f1ff54f98caa0088d4
 - name: print-service
   newName: ghcr.io/yuliakushnir/print-service
   newTag: 78b38f36ec0a673e3a9e221941a50f9b753d249d
